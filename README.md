@@ -98,7 +98,7 @@
 
 ![github-sign-in-page](./image/github_sign_in_page.jpg)
 
-2.进入 **Account Settings** ，添加 **SSH Key** 。**SSH Key** 是用户使用SSH登陆工具(本教程里用的是TortoiseGIT工具)登陆或上传文件至Github时用的密码。
+2.进入 **Account Settings** ，添加 **SSH Key** 。 **SSH Key** 是用户使用SSH工具(本教程里用的是TortoiseGIT里集成的工具)登陆或上传文件至Github时用的密码。
 
 ![github-account-settings](./image/github_account_settings.jpg)
 
@@ -173,9 +173,13 @@
 
 6.现在我们已经成功地在Github上面建立了一个仓库，接下来我们需要使用TortoiseGit工具 **Clone** 刚才建立的仓库，然后添加文件并上传。
 
-![tortoisegit-clone0](./image/tortoisegit_clone0.jpg)
+- 在Windows资源管理器中单击 **右键**；
+- 选择 **Git Clone**项；在 **URL** 项目中添加 **Repository** (仓库)的地址；
+- 在 **Directory** 项目中填入目标文件夹(空文件夹或者不存在)；
+- 在 **LoadPutty Key** 项目中载入刚刚建立的并保存的Private Key，点击 **OK** 按钮开始 **Clone**；
+- **Clone** 结束后点击 **Close** 退出。
 
-![tortoisegit-clone1](./image/tortoisegit_clone1.jpg)
+![tortoisegit-clone0](./image/tortoisegit_clone0.jpg)
 
 ![tortoisegit-clone2](./image/tortoisegit_clone2.jpg)
 
