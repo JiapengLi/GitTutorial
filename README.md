@@ -190,3 +190,37 @@
 ![tortoisegit-clone5](./image/tortoisegit_clone5.jpg)
 
 ![tortoisegit-clone6](./image/tortoisegit_clone6.jpg)
+
+7.向Github上传文件。
+
+- 在 **GitTutorial** 文件夹中新建 **README.md** ；
+- 编辑 **README.md** ，这里给出了Markdown格式的 **README.md** 样例；
+- 另外，为了演示Markdown中添加图片的功能，建立一个 **image** 文件夹(这个名字可以随便取)，并向其添加一些图片
+
+![github-upload0](./image/github_upload0.jpg)
+
+![github-upload1](./image/github_upload1.jpg)
+
+![github-upload3](./image/github_upload3.jpg)
+
+![github-upload4](./image/github_upload4.jpg)
+
+- **GitTutorial**文件夹中右击，选择 **Git Commit->"master"** ；
+- 在新弹出的对话框里选择需要上传的文件，填入 **Message** (Message 的内容要对题，描述你此次上传都做了什么)，按OK确认；
+- 在新弹出的对话框里单击 **PUSH**按钮上传文件；（在实际开发中，此时可以选择不上传，而在多次Commit之后再上传）
+- 在新弹出的对话框里选择 **Local** (本地分支)、 **Ref-Remote** (远程分支)、 **Destination-Remote** (远程目标)，由于我们只有一个分支所以这些项我们都选择默认就可以了，选择 **Autoload Putty Key** ，然后点击OK开始上传；
+- 至此我们完成了Github文件的上传。
+
+![tortoise_commit0](./image/tortoisegit_commit0.jpg)
+
+![tortoise_commit1](./image/tortoisegit_commit1.jpg)
+
+![tortoise_commit2](./image/tortoisegit_commit2.jpg)
+
+![tortoise_commit3](./image/tortoisegit_commit3.jpg)
+
+![tortoise_commit4](./image/tortoisegit_commit4.jpg)
+
+完成上传，再次回到Github查看效果。
+
+[示例效果](https://github.com/JiapengLi/GitTutorialPractice)
