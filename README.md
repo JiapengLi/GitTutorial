@@ -1,5 +1,7 @@
-# Github and Git Tutorial #
-介绍使用Github账户+mysysgit+TortoiseGit进行代码管理。
+# Github and Git 图文教程 （未完成）#
+图文介绍Windows系统下使用Github账户+mysysgit+TortoiseGit进行文件管理的方法。
+
+***声明：作者使用Git的时间很短，对于博大精深的GIT所知甚少，如有任何疏漏之处，希望读者能予以纠正，不胜感激。基于上述原因，此文档会随着我对GIT的加深了解不断充实内容。***
 
 ## 安装 ##
 
@@ -72,6 +74,16 @@
 
 ![tortoise-install5](./image/tortoisegit_install5.jpg)
 
+## 术语 ##
+(本节未完成)
+
+- **repository**
+- **clone**
+- **push**
+- **branch**
+- **merge**
+- **commit**
+
 ## 设置 ##
 
 ### TortoiseGit 设置 ###
@@ -82,7 +94,7 @@
 
 ![tortoise-settings](./image/tortoisegit_settings.jpg)
 
-提交之后可以在仓库 **Commit** 记录中体现出来
+在我们成功将文件上传至Github之后，可以在仓库 **Name** 会在 **Commit** 记录中体现出来。
 
 ![git-user-info](./image/git_user_name.jpg)
 
@@ -139,7 +151,7 @@
 
 ![github-ssh-keys-add](./image/github_ssh_keys_add.jpg)
 
-![github-ssh-keys-adding](./image/github_ssh_keys_adding.jpg)
+![github-ssh-keys-adding](./image/github_ssh_keys_adding0.jpg)
 
 切换到 **Puttygen** 软件，拷贝Public Key 至Github上的 **Add an SSH Key -> Key**窗口。点击 **Add key** ，再之后弹出的密码确认框中输入Github账户密码 点击 **Confirm Password** 完成添加。
 
@@ -221,6 +233,16 @@
 
 ![tortoise_commit4](./image/tortoisegit_commit4.jpg)
 
-完成上传，再次回到Github查看效果。
+完成上传，再次回到Github查看效果。[示例效果](https://github.com/JiapengLi/GitTutorialPractice)
 
-[示例效果](https://github.com/JiapengLi/GitTutorialPractice)
+### 本地TortoiseGit使用 ###
+
+(待续)
+
+## TortoiseGit进阶 ##
+
+(待续)
+
+### 多人协作开发 ###
+
+### TortoiseGit各项的操作所对应的GIT命令 ###
