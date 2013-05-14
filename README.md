@@ -10,6 +10,7 @@
 ![mysysgit-address](./image/mysysgit_download_url.jpg)
 
 安装过程：
+
 0.启动
 
 ![mysysgit-0](./image/mysysgit_install0.jpg)
@@ -85,4 +86,103 @@
 
 ![git-user-info](./image/git_user_name.jpg)
 
-***为简单起见其他所有的项目我们都不做修改，可以在使用中逐渐摸索。***
+***为简单起见其他所有的设置项项暂时我们都不做修改，可以在使用中逐渐摸索。***
+
+## 用法 ##
+
+### 配合Github使用 ###
+
+1.登陆github（如没有账号，则需新建一个账号）。点击 **Sign in** 按钮进入登陆页面,填写用户名（或邮箱）与密码后登陆。（用户名与邮箱名不区分大小写，而密码区分大小写）
+
+![github-main-page](./image/github_main_page.jpg)
+
+![github-sign-in-page](./image/github_sign_in_page.jpg)
+
+2.进入 **Account Settings** ，添加 **SSH Key** 。**SSH Key** 是用户使用SSH登陆工具(本教程里用的是TortoiseGIT工具)登陆或上传文件至Github时用的密码。
+
+![github-account-settings](./image/github_account_settings.jpg)
+
+![github-ssh-keys](./image/github_ssh_keys.jpg)
+
+3.先从Github上退回到本地。我们需要添加 **SSH Key**， 但是我们现在还没有，所以制作一个先。
+开始->所有程序->TortoiseGit->Puttygen 
+
+![tortoisegit-puttygen](./image/tortoisegit_puttygen.jpg)
+
+![tortoisegit-puttygen-start](./image/tortoisegit_puttygen_start.jpg)
+
+点击 **Generate** 按钮开始生成，在指定的区域内移动鼠标加速 **SSH KEY**的产生。
+
+![tortoisegit-puttygen-generate](./image/tortoisegit_puttygen_generate.jpg)
+
+![tortoisegit-puttygen-generating](./image/tortoisegit_puttygen_generating.jpg)
+
+![tortoisegit-puttygen-generated](./image/tortoisegit_puttygen_generated.jpg)
+
+点击 **Save private key** 保存密钥。由于我们没有设置密码，这时会弹出一个窗口问我们是否真的不需要设置 **SSH key** 保护密码。设置密码之后更安全，但在使用的时候每次推送文件都会提示你输入此密码，比较啰嗦，这里可根据个人喜好选择。
+
+![tortoisegit-puttygen-save](./image/tortoisegit_puttygen_save.jpg)
+
+![tortoisegit-puttygen-save-waring](./image/tortoisegit_puttygen_save_warning.jpg)
+
+![tortoisegit-puttygen-save-name](./image/tortoisegit_puttygen_save_name.jpg)
+
+*不需要设置密码的同学可以略过下图*
+
+![tortoisegit-puttygen-set-password](./image/tortoisegit_puttygen_set_password.jpg)
+
+ **暂时不要关闭Puttygen下面还要用到**，如果很不幸你没有看到这句提示。那么也不要紧，重新做一遍吧。
+
+不想重新做一遍的同学可以打开刚才保存的密钥， **File->Open private key** 。如果有同学已经重做，那么恭喜你，你中招了。
+
+4.整理思绪回到Github网站上，相信刚才的页面你还没有关闭，如果关闭了，或者找不到了，那么重新登陆你的Github，右上角点击 **Account Settings** ，然后找到 **SSH Keys**, 点击 **Add SSH Keys** 开始添加。
+
+![github-ssh-keys-add](./image/github_ssh_keys_add.jpg)
+
+![github-ssh-keys-adding](./image/github_ssh_keys_adding.jpg)
+
+切换到 **Puttygen** 软件，拷贝Public Key 至Github上的 **Add an SSH Key -> Key**窗口。点击 **Add key** ，再之后弹出的密码确认框中输入Github账户密码 点击 **Confirm Password** 完成添加。
+
+![tortoisegit-puttygen-copy-public-key](./image/tortoisegit_puttygen_copy_public_key.jpg)
+
+![github-ssh-keys-adding1](./image/github_ssh_keys_adding1.jpg)
+
+![github-ssh-keys-adding2](./image/github_ssh_keys_adding2.jpg)
+
+![github-ssh-keys-added](./image/github_ssh_keys_added.jpg)
+
+5.现在基本工作已经完成了，下面我们可以开始在Github上建立 **Repository** 并上传文件至Github，开始我们的Github之旅了。
+
+点击右上角的 **Create new repo** 建立新仓库，填入 **Name** (名称)与 **Description** (描述)后，点击 **Create repository** 创建仓库。
+
+![github-create-new-repo0](./image/github_create_new_repo0.jpg)
+
+![github-create-new-repo1](./image/github_create_new_repo1.jpg)
+
+![github-create-new-repo2](./image/github_create_new_repo2.jpg)
+
+创建完仓库后，你的github页面大致如下图所示，红框中有几个可以点击的按钮， **Setup in Windows** , **HTTP** 和 **SSH** 。 
+
+- **Setup in Windows** 不知道怎么使用。
+
+- **HTTP** 非加密连接，只读属性，当获取其他用户的github文件时需要用此种格式的链接。
+
+- **SSH** 加密链接，向自己的仓库中添加上传文件时需要用此种格式的链接，这里我需要使用的链接，即是 *git@github.com:JiapengLi/GitTutorialPractice.git* 。
+
+![github-create-new-repo3](./image/github_create_new_repo3.jpg)
+
+6.现在我们已经成功地在Github上面建立了一个仓库，接下来我们需要使用TortoiseGit工具 **Clone** 刚才建立的仓库，然后添加文件并上传。
+
+![tortoisegit-clone0](./image/tortoisegit_clone0.jpg)
+
+![tortoisegit-clone1](./image/tortoisegit_clone1.jpg)
+
+![tortoisegit-clone2](./image/tortoisegit_clone2.jpg)
+
+![tortoisegit-clone3](./image/tortoisegit_clone3.jpg)
+
+![tortoisegit-clone4](./image/tortoisegit_clone4.jpg)
+
+![tortoisegit-clone5](./image/tortoisegit_clone5.jpg)
+
+![tortoisegit-clone6](./image/tortoisegit_clone6.jpg)
