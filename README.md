@@ -247,3 +247,13 @@
 创建Github organization账户
 管理Github organization账户
 ### TortoiseGit各项的操作所对应的GIT命令 ###
+
+## Tips
+
+1. 删除远端分支
+
+		git push origin --delete <branchName>
+	
+	or
+	
+		git push origin :<branchName>
