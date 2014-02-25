@@ -1,5 +1,5 @@
 # Github and Git 图文教程 （未完成）#
-图文介绍Windows系统下使用Github账户+mysysgit+TortoiseGit进行文件管理的方法。
+图文介绍Windows系统下使用Github账户+msysgit+TortoiseGit进行文件管理的方法。
 
 ***声明：作者使用Git的时间很短，对于博大精深的GIT所知甚少，如有任何疏漏之处，希望读者能予以纠正，不胜感激。基于上述原因，此文档会随着作者对GIT的加深了解不断充实内容。***
 
@@ -7,7 +7,7 @@
 
 ### 安装mysysgit ###
 
-下载地址：[mysysgit](http://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git)。下面的截图来自[Git-1.8.1.2-preview20130201.exe](http://code.google.com/p/msysgit/downloads/detail?name=Git-1.8.1.2-preview20130201.exe&can=2&q=full+installer+official+git) 。
+下载地址：[msysgit](http://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git)。下面的截图来自[Git-1.8.1.2-preview20130201.exe](http://code.google.com/p/msysgit/downloads/detail?name=Git-1.8.1.2-preview20130201.exe&can=2&q=full+installer+official+git) 。
 
 ![mysysgit-address](./image/mysysgit_download_url.jpg)
 
@@ -75,14 +75,14 @@
 ![tortoise-install5](./image/tortoisegit_install5.jpg)
 
 ## 术语 ##
-(本节未完成)
 
-- **repository**
-- **clone**
-- **push**
-- **branch**
-- **merge**
-- **commit**
+- **repository** 仓库，包含文件历史记录和配置信息的数据库，通常含有多个分支；
+- **clone** 仓库的克隆是指仓库的副本拷贝，一个新的克隆包含有原仓库的各种信息；
+- **push** 将数据提交到远端仓库；
+- **pull** 从远端仓库或本地分支获取数据，然后合并到指定分支；
+- **branch** 不同的开发路线；
+- **merge** 将数据合并到分支；
+- **commit** 将文件更改记录到仓库中；
 
 ## 设置 ##
 
@@ -250,10 +250,57 @@
 
 ## Tips
 
-1. 删除远端分支
+### 删除远端分支
 
-		git push origin --delete <branchName>
+	git push origin --delete <branchName>
 	
-	or
+or
 	
-		git push origin :<branchName>
+	git push origin :<branchName>
+
+### 取消文件的版本控制
+
+永久删除:  
+
+    git rm files
+
+从仓库删除，保留本地文件：
+
+    git rm --cached files
+
+### 重命名分支
+
+    git branch -m <oldname> <newname>
+
+    git branch -m <newname> // change current branch name
+
+### 取消最近的一次提交
+
+    git reset --soft HEAD^ (--soft 取消提交保留更改)
+
+    git reset --hard HEAD^ (--hard 取消提交并删除更改)
+
+### 取消文件添加
+
+    git reset HEAD file
+
+### 临时隐藏更改/恢复更改
+
+    git stash save
+
+    git stash pop
+
+### 显示所有未加入版本控制的文件
+    git status -vu
+
+### 分支到分支的push
+    git push origin local_branch:remote_branch
+
+### 部分历史记录克隆转为全部历史克隆
+    git fetch --depth=LargeNumber
+
+### 搜索git log
+    git log --all --grep="STRING"
+
+### 创建分支
+    git checkout -b new_branch_name commit_code_91f7edc6c1f4440c1
